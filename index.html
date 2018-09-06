@@ -24,8 +24,243 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						# Keep your site simple, and it will be fast!
+
+						Gabor Javorszky
+
+						A lead dev at Mindsize, freelancer
+
+						> I break sites, so I can put them together better.
+						> - me
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						1) HTTP GET to /some/url
+
+						<img src="pix/ring.webp" alt="">
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						2) server does "stuff"
+
+						<img src="pix/doesstuff.webp" alt="">
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						3) HTTP response, hopefully a 200
+
+						<img src="pix/sendinglove.gif" alt="">
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						4) browser parses the received content (your html)
+
+						<img src="pix/someofthosewords.webp" alt="">
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						5) includes css / js (`deferred`, `async`)
+
+						<img src="pix/loadassets.webp" alt="">
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						6) then parses those css / js files
+
+						<img src="pix/inflate.gif" alt="">
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						7) which may also include additional files...
+
+						<img src="pix/matryoshka.webp" alt="">
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## The Request Life Cycle™
+
+						8) repeat 5-7 until you run out of things to include
+
+						<img src="pix/matryoshka.webp" alt="">
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						# All of those can slow done
+
+						Each
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						# DNS
+
+						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">It&#39;s not DNS<br>There&#39;s no way it&#39;s DNS<br>It was DNS<br><br>-- A troubleshooting haiku<a href="https://t.co/brgEflxBRB">https://t.co/brgEflxBRB</a></p>&mdash; Ryan Scott Brown (@ryan_sb) <a href="https://twitter.com/ryan_sb/status/763454371518611457?ref_src=twsrc%5Etfw">August 10, 2016</a></blockquote>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						# Server
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						This is your site with few plugins installed
+
+						<img src="pix/straightline.jpg" alt="">
+
+						Photo by Robert Murray on Unsplash
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						This is your site with 89 plugins and 4 themes (one of which is Divi)
+
+						<img src="pix/windyroad.jpg" alt="">
+
+						Photo by Raul Taciu on Unsplash
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Javascript is expensive
+
+						<img src="pix/costofjs.png" alt="">
+						<small>The Cost of Javascript in 2018 - https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4</small>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Unused JS is more expensive
+
+						<img src="pix/unusedjs.png" alt="">
+						<small>Actual client's site as of 6pm on 6th Sept</small>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Fonts / CSS
+
+						* FOUC (flash of unstyled content)
+						* popups. so. many. popups. :(
+						* things moving under your mouse, so you "misclick/tap"
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Fight for the user
+
+						Questions to ask:
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						> Do you really need all 4 custom fonts from typekit? All of the glyphs?
+
+						Sure you can't get by with Times New Roman / Arial?
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						> Do you really need to load that fancy frontend framework to display what's on your site?
+
+						(React, Vue, Angular, Ember, etc)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						> Do you really to track users across 9 different services?
+
+						(Google Analytics, mixpanel, snapchat, bing, yahoo, facebook)
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown>
+					<textarea data-template>
+						# Bonus question
+
+						> How much do you respect their privacy?
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						> Do you really need all of the plugins you're currently using?
+
+						Can some of those be broken out into a tiny utility plugin instead? Are some of those unnecessary? Are you only using a tiny part of a larger plugin? (Looking at you, jetpack!)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						> Do you need a full blown pagebuilder?
+
+						Can you instead design your pages so they're more static?
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						> Do you need a javascript based a/b testing?
+
+						Could you do server side template based a/b testing instead?
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						> Do you need to load assets from various different places?
+
+						Can some of them be placed on your server / your CDN instead?
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						> Do you need a starter theme that does EVERYTHING?!
+
+						Divi and Avada are my top 2 "I'm not touching that" themes.
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						> Are you using plugins that were written with performance in mind?
+
+						There are ~some~ lots that haven't... Like, LOTS... it's astounding.
+					</textarea>
+				</section>
 			</div>
 		</div>
 
@@ -37,6 +272,9 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				width: 1280,
+				height: 768,
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
